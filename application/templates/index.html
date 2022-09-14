@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Hello Username
+{% endblock %}
+
+{% block content %}
+    <h1>Bitcoin / BTC rates to other currency</h1>
+    <br>
+    <h2>
+        On this site you can check how much cost '1' bitcoin in other currency.<br>
+        Just type <i style="color: green">'code' or 'name'</i> of currency in search field.<br>
+        Also you can check rate of each currency from <i style="color: green">'Currency List'</i><br>
+    </h2>
+    <p style="font-size: 20px">
+        For all available currencies
+        <a href="{{ url_for('currency_list') }}">
+            <i>click here</i>
+        </a>
+
+    </p>
+{% endblock %}

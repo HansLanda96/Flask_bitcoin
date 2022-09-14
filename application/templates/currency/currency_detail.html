@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Currency: {{ currency['name'] }}
+{% endblock %}
+
+{% block content %}
+    <h1>Currency: {{ currency['name'] }}</h1>
+    <p>Code: {{ currency['code'] }}</p>
+    <p>1 BTC = {{ currency['rate'] }} {{ currency['name'] }}</p>
+    <a href="/currency_list"><button>Back to list</button></a>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Exchanger - {% block title %}Base page{% endblock %}</title>
+</head>
+<body style="background-color: darkkhaki">
+    <div>
+        <strong style="font-size: 22px">Flask BTC Rate</strong>&nbsp;|&nbsp;&nbsp;
+        <a href="/" style="font-size: 22px">Home</a>&nbsp;|&nbsp;&nbsp;
+        <a href="/currency_list" style="font-size: 22px">Currency List</a>&nbsp;|
+        <br><br>
+        <form method="get" action="{{ url_for('rate_input') }}">
+            <label>
+                <input placeholder='Currency name or code' name='currency'>
+            </label>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

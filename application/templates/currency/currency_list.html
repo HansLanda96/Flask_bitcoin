@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    List of currencies
+{% endblock %}
+
+{% block content %}
+    <h1>List of currencies:</h1>
+    {% for currency in data %}
+        <p style="font-size: 18px">
+        <a href="{{ url_for('detail', currency=currency['code']) }}">{{ currency['name'] }}</a>
+            <pre style="font-size: 15px"><i style="color: darkred">{{ currency['code'] }}</i>
+        </pre>
+        <hr>
+    {% endfor %}
+{% endblock %}
+
